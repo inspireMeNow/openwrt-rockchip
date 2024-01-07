@@ -62,7 +62,7 @@ jobs:
                 make defconfig
                 mkdir bin/targets/rockchip/armv8
                 cp squashfs/*.gz bin/targets/rockchip/armv8/
-                make -j$(nproc) 'IGNORE_ERRORS=n m'
+                make -j$(nproc) 'IGNORE_ERRORS=n m' V=s
                 rm -rf build_dir
                 tar -cvf rockchip-images.tar bin/targets/rockchip/armv8
 
